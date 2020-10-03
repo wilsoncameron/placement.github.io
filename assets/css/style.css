@@ -58,7 +58,11 @@ scroll-snap-align: start;
 
 
 #grid {
-  height: 100vh;
+  //height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 30vh;
 }
 
 #container {
@@ -74,9 +78,11 @@ scroll-snap-align: start;
 }
 
 .placement {
-  font-family: 'notanum', arial;
-  font-size: 75px;
+  /* font-family: 'notanum', arial;
+  font-size: 75px; */
   margin-left: 20px;
+  height: 200px;
+  overflow: hidden;
 
 }
 
@@ -278,4 +284,13 @@ overflow: hidden;
   font-family: 'juni';
   font-size: 25px;
   padding: 15%;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .studio {
+
+    margin-top: ;
+  }
+
 }

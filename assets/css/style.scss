@@ -1,0 +1,345 @@
+@font-face {
+    font-family: "juni";
+    src: url("../fonts/junicode-regularcondensed.woff") format('woff');
+}
+
+@font-face {
+    font-family: "juni-bold";
+    src: url("../fonts/junicode-boldcondensed.woff") format('woff');
+}
+
+@font-face {
+    font-family: "juni-boldital";
+    src: url("../fonts/junicode-bolditaliccondensed.woff") format('woff');
+}
+
+@font-face {
+    font-family: "juni-ital";
+    src: url("../fonts/junicode-italiccondensed.woff") format('woff');
+}
+
+@font-face {
+    font-family: "notanum";
+    src: url("../fonts/NotANumber.woff") format('woff');
+}
+
+@mixin small-display {
+  font-size: 1.3rem;
+  font-family: 'juni-ital', arial;
+}
+
+@mixin medium-display {
+  font-family: 'juni';
+  text-align: center;
+  line-height: 1;
+  font-size: 2rem;
+  @media only screen and (min-width: 670px) {
+    font-size: 3rem;
+  }
+
+}
+
+
+@mixin big-display {
+  font-family: 'juni';
+  text-align: center;
+  line-height: 1;
+  font-size: 3rem;
+
+  @media only screen and (min-width: 670px) {
+    font-size: 6rem;
+  }
+}
+
+html, body {
+
+    //overflow-x: hidden;
+}
+
+body {
+
+}
+
+#fullsite {
+  height: 100vh;
+   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+}
+
+
+
+#cover{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  scroll-snap-align: start;
+
+  iframe {
+    top: 50%;
+    transform: translateY(50%);
+  }
+
+  #masthead {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 30vh;
+
+    .placement {
+      width: calc(100% - 40px);
+      margin: 20px auto 20px auto;
+        //height: 200px;
+
+    }
+
+    .studio {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: calc(100% - 40px);
+      margin: 0 auto;
+
+      @media only screen and (min-width: 670px) {
+        max-width: 600px;
+        margin: 0 auto 0 20px;
+      }
+
+      .studio1, .studio2 {
+        width: 47%;
+        p {
+          font-size: 1.6rem;
+          font-family: 'juni', arial;
+        	font-weight: normal;
+          line-height: .9;
+          margin: 0 25px 0 auto;
+
+          @media only screen and (min-width: 500px) {
+            font-size: 2.4rem;
+          }
+
+        }
+      }
+    }
+
+
+
+  }
+
+  #reel {
+    //display: flex;
+    margin: 0 auto;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+
+
+.sections {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 450px;
+    scroll-snap-align: start;
+
+    @media only screen and (min-width: 670px) {
+      height: 100vh;
+    }
+
+    .layer {
+      position: relative;
+      //overflow-y: hidden;
+      &.poster {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    p {
+
+      &.bigtxt {
+        @include big-display;
+        padding: 20px;
+        @media only screen and (min-width: 1024px) {
+          padding: 90px;
+        }
+        @media only screen and (min-width: 1024px) {
+          padding: 15%;
+        }
+      }
+      &.medtxt {
+        @include medium-display;
+      }
+      &.topleft {
+        z-index: 1;
+        //background-color: blue;
+        position: absolute;
+        text-align: left;
+        top: 5%;
+        left: 5%;
+
+        //@media only screen and (min-width: 670px) {
+          //width: 60%;
+        //}
+      }
+    }
+}
+
+
+
+
+.offer {
+  background-color: white;
+}
+
+.slider {
+  z-index: 0;
+  ul {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 50%;
+    scrollbar-width: none;
+    scroll-padding-left: 0px;
+    scroll-padding-inline-start: 0px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    @media only screen and (min-width: 670px) {
+      height: 100vh;
+
+    }
+
+    li {
+      scroll-snap-align: center;
+      padding: 0 50px 40px 0;
+      scroll-snap-stop: always;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      //justify-content: flex-end;
+      justify-content: center;
+      position: relative;
+
+      &:nth-of-type(1){
+        padding: 0 50px 40px 50px;
+        justify-content: flex-end;
+      }
+
+      &.top-align {
+            justify-content: flex-start;
+            transform: translateY(40px);
+
+      }
+
+      &.bottom-align {
+          justify-content: flex-end;
+      }
+
+
+      img {
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      p {
+        @include small-display;
+        margin: 0;
+        padding-top: 10px;
+      }
+
+
+
+    }
+  }
+}
+
+.slider ul:-webkit-scrollbar {
+  display: none;
+}
+
+
+#what {
+  background-color: black;
+  p {
+    color: white;
+    //padding: 15%;
+  }
+}
+
+
+.list1 {
+  //margin-left: 50px;
+}
+
+
+.list2 {
+  //margin-bottom: 30%;
+}
+
+#collaborate {
+  background-color: #dee3e6;
+}
+
+
+//.collaborate p{
+//  color: black;
+//  font-family: 'juni';
+//  font-size: 80px;
+//  padding: 15%;
+//  text-align: center;
+//     line-height: 100%;
+//}
+
+
+.specialize {
+/*  position: relative;
+    width: 100%;
+		height: 100%;
+		min-height:100%;
+		background-size:cover;
+	background-position:center;
+overflow: hidden;
+  background-color: white; */
+  background-color: white;
+
+}
+
+#clients {
+//	min-height:100%;
+  background-color: black;
+  //padding-top: 10px;
+ p{
+  color: white;
+
+}
+}
+
+
+#about {
+  background-color: #f2f3f5;
+    //  min-height:100%;
+      display: flex;
+       justify-content: center;
+       align-items: center;
+p{
+  color: black;
+  font-family: 'juni';
+  font-size: 25px;
+//  padding: 15%;
+}
+}

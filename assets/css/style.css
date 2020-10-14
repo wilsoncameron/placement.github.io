@@ -1,182 +1,158 @@
 @font-face {
-    font-family: "juni";
-    src: url("../fonts/junicode-regularcondensed.woff") format('woff');
+  font-family: "juni";
+  src: url("../fonts/junicode-regularcondensed.woff") format("woff");
 }
-
 @font-face {
-    font-family: "juni-bold";
-    src: url("../fonts/junicode-boldcondensed.woff") format('woff');
+  font-family: "juni-bold";
+  src: url("../fonts/junicode-boldcondensed.woff") format("woff");
 }
-
 @font-face {
-    font-family: "juni-boldital";
-    src: url("../fonts/junicode-bolditaliccondensed.woff") format('woff');
+  font-family: "juni-boldital";
+  src: url("../fonts/junicode-bolditaliccondensed.woff") format("woff");
 }
-
 @font-face {
-    font-family: "juni-ital";
-    src: url("../fonts/junicode-italiccondensed.woff") format('woff');
+  font-family: "juni-ital";
+  src: url("../fonts/junicode-italiccondensed.woff") format("woff");
 }
-
 @font-face {
-    font-family: "notanum";
-    src: url("../fonts/NotANumber.woff") format('woff');
+  font-family: "notanum";
+  src: url("../fonts/NotANumber.woff") format("woff");
 }
-
-html, body {
-
-    overflow-x: hidden;
-}
-
-body {
-
-}
-
 #fullsite {
   height: 100vh;
-   overflow-y: scroll;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-
 }
 
-#intro {
-display: flex;
-  height: 100vh;
-scroll-snap-align: start;
-
-}
-
-.reel {
+#cover {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-   z-index: -1;
+  flex-direction: column;
+  height: 100vh;
+  scroll-snap-align: start;
 }
-
-
-#grid {
-  //height: 100vh;
+#cover iframe {
+  top: 50%;
+  transform: translateY(50%);
+}
+#cover #masthead {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-height: 30vh;
 }
-
-#container {
+#cover #masthead .placement {
+  width: calc(100% - 40px);
+  margin: 20px auto 20px auto;
+}
+#cover #masthead .studio {
   display: flex;
-  height: 100vh;
-  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+@media only screen and (min-width: 670px) {
+  #cover #masthead .studio {
+    max-width: 600px;
+    margin: 0 auto 0 20px;
+  }
+}
+#cover #masthead .studio .studio1, #cover #masthead .studio .studio2 {
+  width: 47%;
+}
+#cover #masthead .studio .studio1 p, #cover #masthead .studio .studio2 p {
+  font-size: 1.6rem;
+  font-family: "juni", arial;
+  font-weight: normal;
+  line-height: 0.9;
+  margin: 0 25px 0 auto;
+}
+@media only screen and (min-width: 500px) {
+  #cover #masthead .studio .studio1 p, #cover #masthead .studio .studio2 p {
+    font-size: 2.4rem;
+  }
+}
+#cover #reel {
+  margin: 0 auto;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-#launch {
+.sections {
   position: relative;
-  margin-left: 20px;
-    margin-top: -75px;
-}
-
-.placement {
-  /* font-family: 'notanum', arial;
-  font-size: 75px; */
-  margin-left: 20px;
-  height: 200px;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
-
+  height: 450px;
+  scroll-snap-align: start;
 }
-
-
-.studio {
-  display: grid;
-grid-template-columns: 30% 30% 30%;
-  margin-left: 20px;
-  margin-top: -200px;
+@media only screen and (min-width: 670px) {
+  .sections {
+    height: 100vh;
+  }
 }
-
-.studio p {
-  font-family: 'juni', arial;
-	font-weight:normal;
-   line-height: 80%;
+.sections .layer {
+  position: relative;
 }
-
-.studio1 {
-grid-column: 1;
-font-size: 40px;
+.sections .layer.poster {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.studio2 {
-grid-column: 2;
-    font-size: 40px;
-     align-items: right;
-     margin-left: 20%;
+.sections p.bigtxt {
+  font-family: "juni";
+  text-align: center;
+  line-height: 1;
+  font-size: 3rem;
+  padding: 20px;
 }
-
-
-
-
-#sections {
- position: relative;
-  height: 100vh;
-    background-size:cover;
-    background-position:center;
-    overflow: hidden;
-    scroll-snap-align: start;
-
-    /*
-    display: flex;
-    height:100%;
-    width:100%;*/
+@media only screen and (min-width: 670px) {
+  .sections p.bigtxt {
+    font-size: 6rem;
+  }
 }
-
-.topleft  {
-  margin-left: 20px;
-    margin-right: 50%;
-  	grid-column: 1 / 7;
-    font-size: 40px;
-   font-family: 'juni', arial;
-  	font-weight:normal;
-    line-height: 80%;
-    z-index: 1;
-    background-color: blue;
-    position: absolute;
+@media only screen and (min-width: 1024px) {
+  .sections p.bigtxt {
+    padding: 90px;
+  }
 }
-
-.what p{
-  color: white;
-	font-family: 'juni';
-  font-size: 80px;
-  padding: 15%;
-text-align: center;
-   line-height: 100%;
+@media only screen and (min-width: 1024px) {
+  .sections p.bigtxt {
+    padding: 15%;
+  }
 }
-
-.what {
-  background-color: black;
-      min-height:100%;
-      display: flex;
-       justify-content: center;
-       align-items: center;
+.sections p.medtxt {
+  font-family: "juni";
+  text-align: center;
+  line-height: 1;
+  font-size: 2rem;
 }
-
+@media only screen and (min-width: 670px) {
+  .sections p.medtxt {
+    font-size: 3rem;
+  }
+}
+.sections p.topleft {
+  z-index: 1;
+  position: absolute;
+  text-align: left;
+  top: 5%;
+  left: 5%;
+}
 
 .offer {
   background-color: white;
 }
 
 .slider {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100%;
-   width: 100%;
-   z-index: 0;
-   position: absolute;
-   margin-left: 50px;
-
+  z-index: 0;
 }
-
 .slider ul {
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
   padding: 0 0 20px 0;
@@ -190,107 +166,90 @@ text-align: center;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 }
-
-.slider ul:-webkit-scrollbar {
-  display: none;
+@media only screen and (min-width: 670px) {
+  .slider ul {
+    height: 100vh;
+  }
 }
-
 .slider ul li {
   scroll-snap-align: center;
-  padding: 0 50px 0 0;
+  padding: 0 50px 40px 0;
   scroll-snap-stop: always;
   flex-shrink: 0;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   width: 600px;
+  justify-content: center;
+  position: relative;
+}
+.slider ul li:nth-of-type(1) {
+  padding: 0 50px 40px 50px;
   justify-content: flex-end;
 }
-
+.slider ul li.top-align {
+  justify-content: flex-start;
+  transform: translateY(40px);
+}
+.slider ul li.bottom-align {
+  justify-content: flex-end;
+}
 .slider ul li img {
   height: auto;
   object-fit: contain;
   width: 100%;
 }
-
-.slider p{
-  font-size: 20px;
-  font-family: 'juni-ital', arial;
-}
-
-.list1 {
-  margin-left: 50px;
-}
-
-
-.list2 {
-  margin-bottom: 30%;
-}
-
-.collaborate {
-  background-color: #f2f3f5;
-      min-height:100%;
-      display: flex;
-       justify-content: center;
-       align-items: center;
-}
-
-
-.collaborate p{
-  color: black;
-  font-family: 'juni';
-  font-size: 80px;
-  padding: 15%;
-  text-align: center;
-     line-height: 100%;
-}
-
-
-.specialize {
-/*  position: relative;
-    width: 100%;
-		height: 100%;
-		min-height:100%;
-		background-size:cover;
-	background-position:center;
-overflow: hidden;
-  background-color: white; */
-  background-color: white;
-
-}
-
-.clients{
-	min-height:100%;
-  background-color: black;
+.slider ul li p {
+  font-size: 1.3rem;
+  font-family: "juni-ital", arial;
+  margin: 0;
   padding-top: 10px;
 }
 
-.clients p{
+.slider ul:-webkit-scrollbar {
+  display: none;
+}
+
+#what {
+  background-color: black;
+}
+#what p {
   color: white;
-
 }
 
+#collaborate {
+  background-color: #dee3e6;
+}
 
-.about{
+.specialize {
+  /*  position: relative;
+      width: 100%;
+  		height: 100%;
+  		min-height:100%;
+  		background-size:cover;
+  	background-position:center;
+  overflow: hidden;
+    background-color: white; */
+  background-color: white;
+}
+
+#clients {
+  background-color: black;
+}
+#clients p {
+  color: white;
+}
+
+#about {
   background-color: #f2f3f5;
-      min-height:100%;
-      display: flex;
-       justify-content: center;
-       align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.about p{
+#about p {
   color: black;
-  font-family: 'juni';
+  font-family: "juni";
   font-size: 25px;
-  padding: 15%;
 }
 
-@media only screen and (max-width: 600px) {
-
-  .studio {
-
-    margin-top: ;
-  }
-
-}
+/*# sourceMappingURL=style.css.map */

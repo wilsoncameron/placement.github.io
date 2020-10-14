@@ -73,11 +73,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  position: relative;
   scroll-snap-align: start;
 
   iframe {
     top: 50%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: -1;
   }
 
   #masthead {
@@ -88,7 +91,8 @@ body {
 
     .placement {
       width: calc(100% - 40px);
-      margin: 20px auto 20px auto;
+      //margin: 20px auto 20px auto;
+      margin: 40px auto 20px auto;
         //height: 200px;
 
     }

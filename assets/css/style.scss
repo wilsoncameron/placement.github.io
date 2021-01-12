@@ -225,9 +225,10 @@ body {
 
     }
 
+
     li {
       scroll-snap-align: center;
-      padding: 0 50px 40px 0;
+      padding: 0 125px 40px 0;
       scroll-snap-stop: always;
       flex-shrink: 0;
       scroll-snap-align: start;
@@ -239,20 +240,18 @@ body {
       position: relative;
 
       &:nth-of-type(1){
-        padding: 0 50px 40px 50px;
+        padding: 0 125px 40px 50px;
         justify-content: flex-end;
       }
 
       &.top-align {
-            justify-content: flex-start;
-            transform: translateY(40px);
-
+        justify-content: flex-start;
+        transform: translateY(40px);
       }
 
       &.bottom-align {
-          justify-content: flex-end;
+        justify-content: flex-end;
       }
-
 
       img {
         height: auto;
@@ -264,12 +263,22 @@ body {
         @include small-display;
         margin: 0;
         padding-top: 10px;
+
       }
 
+      .slidedescript p {
 
 
-    }
+      }
+
+      iframe {
+          width: 100% !important;
+          height: 75%;
+          object-fit: contain;
+
+      }
   }
+}
 }
 
 .slider ul:-webkit-scrollbar {
@@ -327,12 +336,57 @@ overflow: hidden;
 //	min-height:100%;
   background-color: black;
   //padding-top: 10px;
- p{
-  color: white;
+  height: auto;
+  p{
+   color: white;
+  }
 
+
+.clientgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+
+
+  @include big-display;
+  padding: 20px;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 20px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding: 15%;
+}
+
+  > div {
+    background: black;
+    padding: 15%;
+    position: relative;
+    &::before {
+      // for apsect ratio
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+    img {
+      position: absolute;
+      max-width: 170px;
+
+      // Alternate Version
+      // top: 0;
+      // bottom: 0;
+      // right: 0;
+      // left: 0;
+      // margin: auto;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 }
-
 
 #about {
   background-color: #f2f3f5;
@@ -340,10 +394,10 @@ overflow: hidden;
       display: flex;
        justify-content: center;
        align-items: center;
-p{
-  color: black;
-  font-family: 'juni';
-  font-size: 25px;
-//  padding: 15%;
-}
+  p {
+    color: black;
+    font-family: 'juni';
+    font-size: 25px;
+  //  padding: 15%;
+  }
 }

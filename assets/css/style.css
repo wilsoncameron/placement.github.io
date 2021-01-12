@@ -176,7 +176,7 @@
 }
 .slider ul li {
   scroll-snap-align: center;
-  padding: 0 50px 40px 0;
+  padding: 0 125px 40px 0;
   scroll-snap-stop: always;
   flex-shrink: 0;
   scroll-snap-align: start;
@@ -187,7 +187,7 @@
   position: relative;
 }
 .slider ul li:nth-of-type(1) {
-  padding: 0 50px 40px 50px;
+  padding: 0 125px 40px 50px;
   justify-content: flex-end;
 }
 .slider ul li.top-align {
@@ -207,6 +207,11 @@
   font-family: "juni-ital", arial;
   margin: 0;
   padding-top: 10px;
+}
+.slider ul li iframe {
+  width: 100% !important;
+  height: 75%;
+  object-fit: contain;
 }
 
 .slider ul:-webkit-scrollbar {
@@ -238,9 +243,52 @@
 
 #clients {
   background-color: black;
+  height: auto;
 }
 #clients p {
   color: white;
+}
+#clients .clientgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  font-family: "juni";
+  text-align: center;
+  line-height: 1;
+  font-size: 3rem;
+  padding: 20px;
+}
+@media only screen and (min-width: 670px) {
+  #clients .clientgrid {
+    font-size: 6rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #clients .clientgrid {
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #clients .clientgrid {
+    padding: 15%;
+  }
+}
+#clients .clientgrid > div {
+  background: black;
+  padding: 15%;
+  position: relative;
+}
+#clients .clientgrid > div::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+#clients .clientgrid > div img {
+  position: absolute;
+  max-width: 170px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #about {

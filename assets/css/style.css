@@ -54,7 +54,7 @@
   width: calc(100% - 40px);
   margin: 0 auto;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   #cover #masthead .studio {
     max-width: 600px;
     margin: 0 auto 0 20px;
@@ -105,15 +105,15 @@
   font-family: "juni";
   text-align: center;
   line-height: 1;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 20px;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   .sections p.bigtxt {
     font-size: 6rem;
   }
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   .sections p.bigtxt {
     padding: 90px;
   }
@@ -129,7 +129,7 @@
   line-height: 1;
   font-size: 2rem;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   .sections p.medtxt {
     font-size: 3rem;
   }
@@ -168,14 +168,14 @@
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   .slider ul {
     height: 100vh;
   }
 }
 .slider ul li {
   scroll-snap-align: center;
-  padding: 0 20px 40px 20px;
+  padding: 0 20px 50px 20px;
   scroll-snap-stop: always;
   flex-shrink: 0;
   scroll-snap-align: start;
@@ -185,16 +185,16 @@
   justify-content: center;
   position: relative;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   .slider ul li {
     width: 600px;
   }
 }
 .slider ul li:nth-of-type(1) {
-  padding: 0 0px 40px 20px;
+  padding: 0 0px 50px 20px;
   justify-content: flex-end;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   .slider ul li:nth-of-type(1) {
     padding: 0 40px 40px 40px;
   }
@@ -314,7 +314,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   #clients .clientgrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -330,7 +330,7 @@
   max-width: 70px;
   margin: 0 auto;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   #clients .clientgrid .clientlogo img {
     max-width: 140px;
   }
@@ -350,13 +350,23 @@
 #about p {
   color: black;
   font-family: "juni";
-  font-size: 25px;
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 834px) {
+  #about p {
+    font-size: 2rem;
+  }
 }
 
 #bio {
   justify-content: space-between;
   align-items: center;
-  margin: 30%;
+  margin: 10%;
+}
+@media only screen and (min-width: 834px) {
+  #bio {
+    margin: 30%;
+  }
 }
 #bio p {
   text-align: justify;
@@ -364,6 +374,15 @@
 
 #archive {
   background-color: white;
+  margin-right: 5%;
+}
+#archive a {
+  font-size: 0.9rem;
+}
+@media only screen and (min-width: 834px) {
+  #archive a {
+    font-size: 2rem;
+  }
 }
 
 .links {
@@ -376,7 +395,7 @@
   top: 15%;
   left: 5%;
 }
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 834px) {
   .links {
     font-size: 2rem;
   }

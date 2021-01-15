@@ -33,7 +33,7 @@
   text-align: center;
   line-height: 1;
   font-size: 2rem;
-  @media only screen and (min-width: 670px) {
+  @media only screen and (min-width: 834px) {
     font-size: 3rem;
   }
 
@@ -44,9 +44,9 @@
   font-family: 'juni';
   text-align: center;
   line-height: 1;
-  font-size: 3rem;
+  font-size: 2.5rem;
 
-  @media only screen and (min-width: 670px) {
+  @media only screen and (min-width: 834px) {
     font-size: 6rem;
   }
 }
@@ -56,7 +56,7 @@
   text-align: center;
   line-height: 1.2;
   font-size: 1rem;
-  @media only screen and (min-width: 670px) {
+  @media only screen and (min-width: 834px) {
     font-size: 2rem;
   }
 
@@ -115,7 +115,7 @@ body {
       width: calc(100% - 40px);
       margin: 0 auto;
 
-      @media only screen and (min-width: 670px) {
+      @media only screen and (min-width: 834px) {
         max-width: 600px;
         margin: 0 auto 0 20px;
       }
@@ -181,7 +181,7 @@ body {
       &.bigtxt {
         @include big-display;
         padding: 20px;
-        @media only screen and (min-width: 670px) {
+        @media only screen and (min-width: 834px) {
           padding: 90px;
         }
         @media only screen and (min-width: 1024px) {
@@ -204,7 +204,7 @@ body {
           max-width: 650px;
         }
 
-        //@media only screen and (min-width: 670px) {
+        //@media only screen and (min-width: 834px) {
           //width: 60%;
         //}
       }
@@ -217,7 +217,7 @@ body {
 //   .layer {
 //     width: 100%;
 //     margin: 0 auto 0 40px;
-//     @media only screen and (min-width: 670px) {
+//     @media only screen and (min-width: 834px) {
 //       //width: calc(100% - 60px);
 //     }
 //     @media only screen and (min-width: 1024px) {
@@ -246,7 +246,7 @@ body {
     scroll-padding-inline-start: 0px;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-    @media only screen and (min-width: 670px) {
+    @media only screen and (min-width: 834px) {
       height: 100vh;
 
     }
@@ -255,7 +255,7 @@ body {
     li {
       scroll-snap-align: center;
 
-      padding: 0 20px 40px 20px;
+      padding: 0 20px 50px 20px;
       scroll-snap-stop: always;
       flex-shrink: 0;
       scroll-snap-align: start;
@@ -265,15 +265,15 @@ body {
       //justify-content: flex-end;
       justify-content: center;
       position: relative;
-      @media only screen and (min-width: 670px) {
+      @media only screen and (min-width: 834px) {
         width: 600px;
         //padding: 0 125px 40px 0;
       }
 
       &:nth-of-type(1){
-        padding: 0 0px 40px 20px;
+        padding: 0 0px 50px 20px;
         justify-content: flex-end;
-        @media only screen and (min-width: 670px) {
+        @media only screen and (min-width: 834px) {
           padding: 0 40px 40px 40px;
         }
       }
@@ -391,7 +391,7 @@ overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    @media only screen and (min-width: 670px) {
+    @media only screen and (min-width: 834px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
@@ -404,7 +404,7 @@ overflow: hidden;
         width: 100%;
         max-width: 70px;
         margin: 0 auto;
-        @media only screen and (min-width: 670px) {
+        @media only screen and (min-width: 834px) {
           max-width: 140px;
         }
         @media only screen and (min-width: 1024px) {
@@ -475,15 +475,20 @@ overflow: hidden;
   p {
     color: black;
     font-family: 'juni';
-    font-size: 25px;
-  //  padding: 15%;
+    font-size: 1.5rem;
+    @media only screen and (min-width: 834px) {
+      font-size: 2rem;}
+
   }
 }
 
 #bio {
   justify-content: space-between;
    align-items: center;
-   margin: 30%;
+     margin: 10%;
+    @media only screen and (min-width: 834px) {
+   margin: 30%;}
+
 
    p {
      text-align: justify;
@@ -497,6 +502,12 @@ overflow: hidden;
         // display: flex;
       //    justify-content: center;
         //  align-items: center;
+        margin-right: 5%;
+a {
+  font-size: .9rem;
+  @media only screen and (min-width: 834px) {
+    font-size: 2rem;}
+}
 
 }
 

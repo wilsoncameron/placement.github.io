@@ -89,8 +89,9 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height: 100vh;
   scroll-snap-align: start;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 .sections .layer {
   position: relative;

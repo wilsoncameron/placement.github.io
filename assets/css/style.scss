@@ -162,8 +162,11 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    height: 100vh;
     scroll-snap-align: start;
+    //height: 100vh; //add this back in if below doesnt work
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+
 
     .layer {
       position: relative;

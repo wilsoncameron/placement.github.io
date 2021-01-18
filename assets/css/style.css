@@ -218,9 +218,6 @@
   margin: 0;
   padding-top: 10px;
 }
-.slider ul p.vertslidedescript {
-  margin-left: 21%;
-}
 .slider ul:-webkit-scrollbar {
   display: none;
 }
@@ -446,6 +443,9 @@
 }
 .movie iframe.sixteen-nine {
   height: 143%;
+}
+.movie iframe.nine-sixteen {
+  transform: translate(-22%, 0%);
 }
 
 /*# sourceMappingURL=style.css.map */

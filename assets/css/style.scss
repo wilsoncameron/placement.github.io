@@ -310,10 +310,6 @@ body {
         margin: 0;
         padding-top: 10px;
 
-        &.vertslidedescript {
-          margin-left: 21%;
-        }
-
       }
 
       .slidedescript p {
@@ -582,5 +578,8 @@ a {
   border: 0;
   &.sixteen-nine {
     height: 143%;
+  }
+  &.nine-sixteen {
+  transform: translate(-22%,0%);
   }
 }

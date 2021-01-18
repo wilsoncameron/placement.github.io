@@ -117,7 +117,7 @@ body {
       margin: 0 auto;
 
       @media only screen and (min-width: 834px) {
-        max-width: 600px;
+        max-width: 700px;
         margin: 0 auto 0 20px;
       }
 
@@ -297,18 +297,6 @@ body {
         width: 100%;
       }
 
-      p {
-        @include small-display;
-        margin: 0;
-        padding-top: 10px;
-
-      }
-
-      .slidedescript p {
-
-
-      }
-
       // iframe {
       //     width: 100% !important;
       //     height: 75%;
@@ -316,6 +304,24 @@ body {
       //
       // }
   }
+
+      p {
+        @include small-display;
+        margin: 0;
+        padding-top: 10px;
+
+        &.vertslidedescript {
+          margin-left: 21%;
+        }
+
+      }
+
+      .slidedescript p {
+
+      }
+
+
+
 }
 }
 

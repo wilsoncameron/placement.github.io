@@ -32,7 +32,7 @@
   font-family: 'juni';
   text-align: center;
   line-height: 1;
-  font-size: 2rem;
+  font-size: 1.6rem;
   @media only screen and (min-width: 834px) {
     font-size: 3rem;
   }
@@ -194,6 +194,7 @@ body {
       }
       &.medtxt {
         @include medium-display;
+
 
       }
       &.topleft {

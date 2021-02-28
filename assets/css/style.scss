@@ -34,7 +34,14 @@
   line-height: 1;
   font-size: 1.6rem;
   @media only screen and (min-width: 834px) {
-    font-size: 3rem;
+    font-size: 1.8rem;
+  }
+  @media only screen and (min-width: 1024px) {
+    font-size: 2rem;
+  }
+
+  @media only screen and (min-width: 1450px) {
+    font-size: 3rem
   }
 
 }
@@ -47,6 +54,12 @@
   font-size: 2.5rem;
 
   @media only screen and (min-width: 834px) {
+    font-size: 3.6rem;
+  }
+  @media only screen and (min-width: 1024px) {
+    font-size: 4rem;
+  }
+  @media only screen and (min-width: 1450px) {
     font-size: 6rem;
   }
 }
@@ -88,11 +101,31 @@ body {
   scroll-snap-align: start;
   overflow-y: none;
 
-  iframe {
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
-    z-index: -1;
+
+  .covermovie {
+    //iframe {
+      position: relative;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      //background: yellow;
+      //margin: 0 auto;
+    .covermovie_inner {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      width: 100%;
+      iframe {
+        width: 100%;
+        height: 400px;
+        @media only screen and (min-width: 1450px) {
+          height: 600px;
+        }
+
+      }
+
+    }
   }
 
   #masthead {
@@ -100,6 +133,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     max-height: 30vh;
+
 
     .placement {
       width: calc(100% - 40px);
@@ -191,6 +225,7 @@ body {
         @media only screen and (min-width: 1024px) {
           padding: 15%;
         }
+
       }
       &.medtxt {
         @include medium-display;
@@ -205,13 +240,16 @@ body {
         top: 5%;
         left: 5%;
         max-width: 350px;
+        @media only screen and (min-width: 834px) {
+          max-width: 350px;
+        }
         @media only screen and (min-width: 1024px) {
+          max-width: 400px;
+        }
+        @media only screen and (min-width: 1450px) {
           max-width: 650px;
         }
 
-        //@media only screen and (min-width: 834px) {
-          //width: 60%;
-        //}
       }
     }
 }
@@ -271,15 +309,26 @@ body {
       justify-content: center;
       position: relative;
       @media only screen and (min-width: 834px) {
+        width: 400px;
+
+      }
+
+      @media only screen and (min-width: 1024px) {
+        width: 500px;
+      }
+
+      @media only screen and (min-width: 1450px) {
         width: 600px;
-        //padding: 0 125px 40px 0;
       }
 
       &:nth-of-type(1){
         padding: 0 0px 100px 20px;
         justify-content: flex-end;
         @media only screen and (min-width: 834px) {
-          padding: 0 40px 40px 40px;
+          padding: 0 40px 40px 60px;
+        }
+        @media only screen and (min-width: 1024px) {
+          padding: 0 40px 40px 80px;
         }
       }
 
@@ -415,7 +464,7 @@ overflow: hidden;
           max-width: 140px;
         }
         @media only screen and (min-width: 1024px) {
-          max-width: 200px;
+          max-width: 133px;
         }
       }
     }
@@ -486,6 +535,9 @@ overflow: hidden;
     @media only screen and (min-width: 834px) {
       font-size: 2rem;}
 
+      @media only screen and (min-width: 1800px) {
+        font-size: 2rem;}
+
   }
 }
 
@@ -494,11 +546,19 @@ overflow: hidden;
    align-items: center;
      margin: 10%;
     @media only screen and (min-width: 834px) {
-   margin: 30%;}
-
+      //margin: 30%;
+      max-width: 600px;
+    }
+    @media only screen and (min-width: 1450px) {
+      max-width: 1200px;
+    }
 
    p {
-     text-align: justify;
+     @include medium-display;
+     text-align: left;
+     @media only screen and (min-width: 1450px) {
+      //text-align: center;
+      }
    }
 
 }
@@ -513,8 +573,15 @@ overflow: hidden;
 a {
   font-size: .9rem;
   @media only screen and (min-width: 834px) {
-    font-size: 1.8rem;}
+    font-size: 1.2rem;}
+
+    @media only screen and (min-width: 1024px) {
+      font-size: 1.1rem;}
+
+      @media only screen and (min-width: 1450px) {
+        font-size: 1.5rem;}
 }
+
 
 }
 
@@ -524,6 +591,7 @@ a {
   text-align: left;
   top: 15%;
   left: 5%;
+
   a {
     color: #6b97ad;
     text-decoration: none;
@@ -553,6 +621,12 @@ a {
         bottom: 50%;
         top: initial;
       }
+    }
+
+    .links-year {
+      margin-right: 20px;
+      color: black;
+      display: inline;
     }
   }
 }

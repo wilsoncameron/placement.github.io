@@ -32,11 +32,27 @@
   scroll-snap-align: start;
   overflow-y: none;
 }
-#cover iframe {
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
+#cover .covermovie {
+  position: relative;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+#cover .covermovie .covermovie_inner {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 100%;
+}
+#cover .covermovie .covermovie_inner iframe {
+  width: 100%;
+  height: 400px;
+}
+@media only screen and (min-width: 1450px) {
+  #cover .covermovie .covermovie_inner iframe {
+    height: 600px;
+  }
 }
 #cover #masthead {
   display: flex;
@@ -111,6 +127,16 @@
 }
 @media only screen and (min-width: 834px) {
   .sections p.bigtxt {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sections p.bigtxt {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .sections p.bigtxt {
     font-size: 6rem;
   }
 }
@@ -132,6 +158,16 @@
 }
 @media only screen and (min-width: 834px) {
   .sections p.medtxt {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sections p.medtxt {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .sections p.medtxt {
     font-size: 3rem;
   }
 }
@@ -143,7 +179,17 @@
   left: 5%;
   max-width: 350px;
 }
+@media only screen and (min-width: 834px) {
+  .sections p.topleft {
+    max-width: 350px;
+  }
+}
 @media only screen and (min-width: 1024px) {
+  .sections p.topleft {
+    max-width: 400px;
+  }
+}
+@media only screen and (min-width: 1450px) {
   .sections p.topleft {
     max-width: 650px;
   }
@@ -188,6 +234,16 @@
 }
 @media only screen and (min-width: 834px) {
   .slider ul li {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .slider ul li {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .slider ul li {
     width: 600px;
   }
 }
@@ -197,7 +253,12 @@
 }
 @media only screen and (min-width: 834px) {
   .slider ul li:nth-of-type(1) {
-    padding: 0 40px 40px 40px;
+    padding: 0 40px 40px 60px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .slider ul li:nth-of-type(1) {
+    padding: 0 40px 40px 80px;
   }
 }
 .slider ul li.top-align {
@@ -338,7 +399,7 @@
 }
 @media only screen and (min-width: 1024px) {
   #clients .clientgrid .clientlogo img {
-    max-width: 200px;
+    max-width: 133px;
   }
 }
 
@@ -358,6 +419,11 @@
     font-size: 2rem;
   }
 }
+@media only screen and (min-width: 1800px) {
+  #about p {
+    font-size: 2rem;
+  }
+}
 
 #bio {
   justify-content: space-between;
@@ -366,13 +432,36 @@
 }
 @media only screen and (min-width: 834px) {
   #bio {
-    margin: 30%;
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  #bio {
+    max-width: 1200px;
   }
 }
 #bio p {
-  text-align: justify;
+  font-family: "juni";
+  text-align: center;
+  line-height: 1;
+  font-size: 1.6rem;
+  text-align: left;
 }
-
+@media only screen and (min-width: 834px) {
+  #bio p {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #bio p {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  #bio p {
+    font-size: 3rem;
+  }
+}
 #archive {
   background-color: white;
   margin-right: 5%;
@@ -382,7 +471,17 @@
 }
 @media only screen and (min-width: 834px) {
   #archive a {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #archive a {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  #archive a {
+    font-size: 1.5rem;
   }
 }
 
@@ -425,6 +524,11 @@
   background: yellow;
   bottom: 50%;
   top: initial;
+}
+.links a .links-year {
+  margin-right: 20px;
+  color: black;
+  display: inline;
 }
 
 .movie {
